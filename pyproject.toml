@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "compile any powershell .ps1 script to .cmd file"
 authors = ["koswu <koswu@outlook.com>"]
 readme = "README.md"
+exclude = ["demo/*", "tests/*", "docs/*", "dist/*", "build/*", "pwshc.egg-info/*", ".vscode/*"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -20,3 +21,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 pwshc = "pwshc:__main__"
+
