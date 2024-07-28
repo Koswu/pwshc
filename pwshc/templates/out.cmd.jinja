@@ -9,9 +9,9 @@ This is much nicer if you're calling this from an existing cmd window
 #}
 GOTO :EOF
 {#
-END POWERSHELL AS BATCH HEADER #>
 The dot-source plus @Args is a hack to let you use a param block even though the first line of the file is ::
 #}
+:: END POWERSHELL AS BATCH HEADER #>
 . {{ '{' }}
 
 {{ script }}
