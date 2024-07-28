@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "pwshc"
 version = "0.1.0"
-description = "compile any powershell .ps1 script to .cmd file"
+description = "compile any powershell .ps1 script to a .cmd file"
 authors = ["koswu <koswu@outlook.com>"]
 readme = "README.md"
 exclude = ["demo/*", "tests/*", "docs/*", "dist/*", "build/*", "pwshc.egg-info/*", ".vscode/*"]

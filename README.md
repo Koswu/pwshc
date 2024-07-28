@@ -1,6 +1,6 @@
 # PowerShell Compiler
 
-compile any `.ps1` file to `.cmd` file so you can execute them by just double click in windows.
+Compile any `.ps1` file into a `.cmd` file so that you can execute it with a double-click in Windows.
 
 ## Usage
 
