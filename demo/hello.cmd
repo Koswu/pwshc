@@ -7,6 +7,7 @@ del %~s0.ps1 >nul
 
 GOTO :EOF
 
+:: END POWERSHELL AS BATCH HEADER #>
 . {
 
 # hello world
