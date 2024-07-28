@@ -13,10 +13,10 @@ _OutputPath = Annotated[
         help="The output path for the compiled .cmd file. If not provided, the compiled file will be saved in the same directory as the input file.",
     ),
 ]
-_DeleteTempFileFlag = Annotated[
+_AutoElevateFlag = Annotated[
     bool,
     typer.Option(
-        help="Delete the temporary .ps1 file after .cmd execution.",
+        help="add auto-elevate code to the compiled .cmd file",
         show_default=True,
         is_flag=True,
     ),
@@ -26,6 +26,6 @@ _DeleteTempFileFlag = Annotated[
 def main(
     input: _InputFile,
     output: _OutputPath = None,
-    del_temp_file: _DeleteTempFileFlag = True,
+    auto_elevate: _AutoElevateFlag = False,
 ):
-    compile(input, output, del_temp_file)
+    compile(input, output, auto_elevate)
