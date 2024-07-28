@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pwshc"
-version = "0.1.1"
+version = "0.1.2"
 description = "compile any powershell .ps1 script to a .cmd file"
 authors = ["koswu <koswu@outlook.com>"]
 readme = "README.md"
