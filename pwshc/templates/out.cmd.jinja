@@ -3,7 +3,9 @@
 @ECHO OFF
 copy %~s0 %~s0.ps1 >nul
 PowerShell.exe -ExecutionPolicy Unrestricted -NoProfile -Command function :: {}; %~s0.ps1 '%1' '%2'
+{% if delete_temp_file %}
 del %~s0.ps1 >nul
+{% endif %}
 {# To avoid potentially leaving a window hanging, you could EXIT
 This is much nicer if you're calling this from an existing cmd window
 #}

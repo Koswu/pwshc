@@ -10,7 +10,7 @@ _env = Environment(
 _cmd_template = _env.get_template("out.cmd.jinja")
 
 
-def compile(input: Path, output: Optional[Path] = None):
+def compile(input: Path, output: Optional[Path] = None, delete_temp_file: bool = True):
     if not input.exists() or not input.is_file():
         raise FileNotFoundError(f"Input file not found: {input}")
     if output is None:
@@ -22,4 +22,6 @@ def compile(input: Path, output: Optional[Path] = None):
     # guess input encoding with chardet
     guessed_encoding = chardet.detect(input.read_bytes())["encoding"]
     script = input.read_text(encoding=guessed_encoding)
-    output.write_text(_cmd_template.render(script=script))
+    output.write_text(
+        _cmd_template.render(script=script, delete_temp_file=delete_temp_file)
+    )

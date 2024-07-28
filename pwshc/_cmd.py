@@ -15,5 +15,5 @@ _OutputPath = Annotated[
 ]
 
 
-def main(input: _InputFile, output: _OutputPath = None):
-    compile(input, output)
+def main(input: _InputFile, output: _OutputPath = None, del_temp_file: bool = True):
+    compile(input, output, del_temp_file)
