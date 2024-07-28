@@ -1,7 +1,6 @@
 # PowerShell Compiler
 
-[![PyPi version](https://pypip.in/v/pwshc/badge.png)](https://crate.io/packages/pwshc/)
-[![PyPi downloads](https://pypip.in/d/pwshc/badge.png)](https://crate.io/packages/pwshc/)
+[![PyPI](https://img.shields.io/pypi/v/pwshc?label=pypi%20package)](https://pypi.org/project/pwshc/)
 
 Compile any `.ps1` file into a `.cmd` file so that you can execute it with a double-click in Windows.
 
