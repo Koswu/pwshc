@@ -3,7 +3,7 @@
 @ECHO OFF
 copy %~s0 %~s0.ps1 >nul
 PowerShell.exe -ExecutionPolicy Unrestricted -NoProfile -Command function :: {}; %~s0.ps1 '%1' '%2'
-del %~s0.ps1 >nul
+
 
 GOTO :EOF
 

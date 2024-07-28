@@ -13,7 +13,19 @@ _OutputPath = Annotated[
         help="The output path for the compiled .cmd file. If not provided, the compiled file will be saved in the same directory as the input file.",
     ),
 ]
+_DeleteTempFileFlag = Annotated[
+    bool,
+    typer.Option(
+        help="Delete the temporary .ps1 file after .cmd execution.",
+        show_default=True,
+        is_flag=True,
+    ),
+]
 
 
-def main(input: _InputFile, output: _OutputPath = None, del_temp_file: bool = True):
+def main(
+    input: _InputFile,
+    output: _OutputPath = None,
+    del_temp_file: _DeleteTempFileFlag = True,
+):
     compile(input, output, del_temp_file)
