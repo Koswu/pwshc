@@ -3,4 +3,10 @@
 import typer
 from pwshc._cmd import main
 
-typer.run(main)
+
+def cli():
+    typer.run(main)
+
+
+if __name__ == "__main__":
+    cli()
